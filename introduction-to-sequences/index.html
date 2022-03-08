@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&display=swap" rel="stylesheet">
+    <meta name="description" content="Your site description">
+    
+    <link rel="shortcut icon" href="https://tinjamin.github.io/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+    </script>
+
+    <title>Introduction to Sequences</title>
+</head>
+<body><header id="banner">
+    <h2><a href="https://tinjamin.github.io">Rambunctious Living</a></h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="/posts" title="">posts</a>
+            </li><li>
+                <a href="/tags" title="">tags</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Introduction to Sequences</h1>
+        <div>
+                <time>March 7, 2022</time>
+            </div>
+        <div id="post-author">
+            
+            Author: Tinjamin
+            
+        </div>
+        <div id="post-tag">
+            
+            Tags: [Math]
+            
+        </div>
+    </header>
+    <aside>
+        
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#definition">Definition</a>
+      <ul>
+        <li><a href="#notation">Notation</a>
+          <ul>
+            <li><a href="#example">Example</a></li>
+          </ul>
+        </li>
+        <li><a href="#additional-remarks">Additional Remarks</a></li>
+      </ul>
+    </li>
+    <li><a href="#limit-of-a-sequence">Limit of a Sequence</a>
+      <ul>
+        <li><a href="#example-1">Example</a></li>
+        <li><a href="#theorem">Theorem</a>
+          <ul>
+            <li><a href="#intuition">Intuition</a></li>
+          </ul>
+        </li>
+        <li><a href="#remarks">Remarks</a>
+          <ul>
+            <li><a href="#determining-if-a-sequence-is-alternating">Determining if a Sequence is Alternating</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#characterizing-sequences">Characterizing Sequences</a>
+      <ul>
+        <li><a href="#theorem-1">Theorem</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        
+    </aside><h1 id="definition">Definition</h1>
+<p>A <span style='text-decoration: underline'> sequences</span> is a list of numbers written in a particular order:</p>
+<p>$$\lbrace a_1, a_2, a_3, &hellip;, a_n\rbrace$$</p>
+<p>where the $n^{th}$ term of the sequence is the $n^{th}$ number in the list with $n$ being an integer.</p>
+<h2 id="notation">Notation</h2>
+<p>Sequences are often denoted as follow</p>
+<p>$$\lbrace a_1, a_2, a_3, &hellip;, a_4 \rbrace = \lbrace a_n \rbrace = \lbrace a_n \rbrace_{n=1}^{\infty} $$</p>
+<p>with $ a_n $ being a formula for the sequence.</p>
+<h3 id="example">Example</h3>
+<p>$$ \bigg\lbrace 1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, &hellip; \bigg\rbrace = \bigg\lbrace \frac{1}{n} \bigg\rbrace_{n=1}^{\infty} $$</p>
+<h2 id="additional-remarks">Additional Remarks</h2>
+<p>Note that when graphing a sequence, the plot will not be continuous; rather, the plot will have individual points corresponding to the $ n^{th} $ term for the x-axis and the respective value of the $ a_n $ on the y-axis.</p>
+<h1 id="limit-of-a-sequence">Limit of a Sequence</h1>
+<p>A sequence $ a_n $ has <span style='text-decoration: underline'>limit</span> $L$ if we can make the terms $ a_n $  as close to $L$ as we like by taking $ n $ to be sufficiently large.</p>
+<p>$$ \lim_{n \rightarrow \infty} a_n = L $$</p>
+<p>A sequence is then said to be <span style='text-decoration: underline'>convergent</span> if the limit exists, else the sequence is <span style='text-decoration: underline'>divergent</span>.</p>
+<h2 id="example-1">Example</h2>
+<p>(a) $$ \lbrace -1, 1, -1, 1, &hellip;\rbrace $$</p>
+<p>Divergent. The sequence alternates between positive and negative which means that the limit does not exist.</p>
+<p>(b) $$ \bigg\lbrace \frac{n+1}{n} \bigg\rbrace_{n=1}^{\infty} $$
+Convergent. The sequence approaches $ 1 $ as $ n \rightarrow \infty $.</p>
+<h2 id="theorem">Theorem</h2>
+<p>From the limit of a sequence, we can apply more Calc I techniques by finding a function such that $ f(n) = a_n $ and $ \lim_{x \rightarrow \infty}f(x) = L $  for integers $ n $. If such function exist, then</p>
+<p>$$ \lim_{x \rightarrow \infty}f(x) = \lim_{n \rightarrow \infty}a_n = L $$</p>
+<h3 id="intuition">Intuition</h3>
+<p>This theorem basically states that if we can represent the discontinuous points of a sequence with a function (where $ x $ contains $ n $ and the values between each iteration of $ n $), then we can take the limit of the function to examine the end behavior which should be equivalent to the end behavior of the sequence because the range of the function contains the range of the sequence.</p>
+<p>From this theorem, we can apply different limit techniques to determine the end behavior of a sequence to see if it is convergent or divergent.</p>
+<h2 id="remarks">Remarks</h2>
+<p>Note that the Squeeze Theorem also works for the limit computation of a sequence.</p>
+<h3 id="determining-if-a-sequence-is-alternating">Determining if a Sequence is Alternating</h3>
+<p>(a)
+$$ \bigg\lbrace (-1)^n \frac{2n+1}{n^2} \bigg\rbrace_{n=1}^{\infty} $$</p>
+<p>By the squeeze theorem, if</p>
+<p>$$ \lim_{n \rightarrow \infty} -\vert a_n \vert = \lim_{n \rightarrow \infty} |a_n| =0 $$</p>
+<p>then,</p>
+<p>$$ \lim_{n \rightarrow \infty} a_n = 0 $$</p>
+<p>Using this fact, we can determine if the sequence above is convergent or divergent. First, consider the absolute value of the sequence:</p>
+<p>$$ \lim_{n \rightarrow \infty} \bigg| (-1)^n \frac{2n+1}{n^2} \bigg| = \lim_{n \rightarrow \infty} \frac{2n+1}{n^2} = 0$$</p>
+<p>Therefore, by Squeeze Theorem, we know that</p>
+<p>$$ \lim_{n \rightarrow \infty}(-1)^n \frac{2n+1}{n^2} = 0 $$</p>
+<p>Thus, even though the sequence looks like it&rsquo;s alternating between positive and negative, the end behavior of the sequence shows that it&rsquo;s actually not alternating because the limit equals zero, which is neither positive or negative. If the limit was anything besides zero, then the sequence <em>does</em> alternate and is said to be divergent.</p>
+<h1 id="characterizing-sequences">Characterizing Sequences</h1>
+<p>A sequence is said to be</p>
+<ul>
+<li><span style='text-decoration: underline'>increasing</span> if $ a_n &lt; a_{n+1} $ for <em>all</em> $ n \geq 1 $</li>
+<li><span style='text-decoration: underline'>decreasing</span> if $ a_n &gt; a_{n+1} $ for <em>all</em> $ n \geq 1 $</li>
+</ul>
+<p>A sequence is said to be <span style='text-decoration: underline'>monotonic</span> if it is either <em>always</em> increasing or decreasing.</p>
+<p>Sequences can also be bounded above and below</p>
+<ul>
+<li><span style='text-decoration: underline'>bounded above</span> if there exists $ M $ such that $ a_n \leq M $ for $ n \geq 1 $</li>
+<li><span style='text-decoration: underline'>bounded below</span> if there exists $ m $ such that $ m \leq a_n $ for $ n \geq 1 $</li>
+</ul>
+<p>A sequence is said to be <span style='text-decoration: underline'>bounded below</span> if it is <em>both</em> bounded above and below.</p>
+<h2 id="theorem-1">Theorem</h2>
+<p>Every bounded monotnic sequence is convergent.</p>
+</article>
+
+        </main><footer id="footer">
+    Theme: Etch | © Tin Bui
+</footer>
+</body>
+</html>

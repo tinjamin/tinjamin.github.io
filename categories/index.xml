@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Rambunctious Living</title>
+    <link>https://tinjamin.github.io/categories/</link>
+    <description>Recent content in Categories on Rambunctious Living</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="https://tinjamin.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>Introduction to Sequences</title>
+      <link>https://tinjamin.github.io/introduction-to-sequences/</link>
+      <pubDate>Mon, 07 Mar 2022 14:09:30 -0500</pubDate>
+      
+      <guid>https://tinjamin.github.io/introduction-to-sequences/</guid>
+      <description>&lt;h1 id=&#34;definition&#34;&gt;Definition&lt;/h1&gt;
+&lt;p&gt;A &lt;span style=&#39;text-decoration: underline&#39;&gt; sequences&lt;/span&gt; is a list of numbers written in a particular order:&lt;/p&gt;
+&lt;p&gt;$$\lbrace a_1, a_2, a_3, &amp;hellip;, a_n\rbrace$$&lt;/p&gt;
+&lt;p&gt;where the $n^{th}$ term of the sequence is the $n^{th}$ number in the list with $n$ being an integer.&lt;/p&gt;
+&lt;h2 id=&#34;notation&#34;&gt;Notation&lt;/h2&gt;
+&lt;p&gt;Sequences are often denoted as follow&lt;/p&gt;
+&lt;p&gt;$$\lbrace a_1, a_2, a_3, &amp;hellip;, a_4 \rbrace = \lbrace a_n \rbrace = \lbrace a_n \rbrace_{n=1}^{\infty} $$&lt;/p&gt;
+&lt;p&gt;with $ a_n $ being a formula for the sequence.&lt;/p&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
+&lt;p&gt;$$ \bigg\lbrace 1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, &amp;hellip; \bigg\rbrace = \bigg\lbrace \frac{1}{n} \bigg\rbrace_{n=1}^{\infty} $$&lt;/p&gt;
+&lt;h2 id=&#34;additional-remarks&#34;&gt;Additional Remarks&lt;/h2&gt;
+&lt;p&gt;Note that when graphing a sequence, the plot will not be continuous; rather, the plot will have individual points corresponding to the $ n^{th} $ term for the x-axis and the respective value of the $ a_n $ on the y-axis.&lt;/p&gt;
+&lt;h1 id=&#34;limit-of-a-sequence&#34;&gt;Limit of a Sequence&lt;/h1&gt;
+&lt;p&gt;A sequence $ a_n $ has &lt;span style=&#39;text-decoration: underline&#39;&gt;limit&lt;/span&gt; $L$ if we can make the terms $ a_n $  as close to $L$ as we like by taking $ n $ to be sufficiently large.&lt;/p&gt;
+&lt;p&gt;$$ \lim_{n \rightarrow \infty} a_n = L $$&lt;/p&gt;
+&lt;p&gt;A sequence is then said to be &lt;span style=&#39;text-decoration: underline&#39;&gt;convergent&lt;/span&gt; if the limit exists, else the sequence is &lt;span style=&#39;text-decoration: underline&#39;&gt;divergent&lt;/span&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;example-1&#34;&gt;Example&lt;/h2&gt;
+&lt;p&gt;(a) $$ \lbrace -1, 1, -1, 1, &amp;hellip;\rbrace $$&lt;/p&gt;
+&lt;p&gt;Divergent. The sequence alternates between positive and negative which means that the limit does not exist.&lt;/p&gt;
+&lt;p&gt;(b) $$ \bigg\lbrace \frac{n+1}{n} \bigg\rbrace_{n=1}^{\infty} $$
+Convergent. The sequence approaches $ 1 $ as $ n \rightarrow \infty $.&lt;/p&gt;
+&lt;h2 id=&#34;theorem&#34;&gt;Theorem&lt;/h2&gt;
+&lt;p&gt;From the limit of a sequence, we can apply more Calc I techniques by finding a function such that $ f(n) = a_n $ and $ \lim_{x \rightarrow \infty}f(x) = L $  for integers $ n $. If such function exist, then&lt;/p&gt;
+&lt;p&gt;$$ \lim_{x \rightarrow \infty}f(x) = \lim_{n \rightarrow \infty}a_n = L $$&lt;/p&gt;
+&lt;h3 id=&#34;intuition&#34;&gt;Intuition&lt;/h3&gt;
+&lt;p&gt;This theorem basically states that if we can represent the discontinuous points of a sequence with a function (where $ x $ contains $ n $ and the values between each iteration of $ n $), then we can take the limit of the function to examine the end behavior which should be equivalent to the end behavior of the sequence because the range of the function contains the range of the sequence.&lt;/p&gt;
+&lt;p&gt;From this theorem, we can apply different limit techniques to determine the end behavior of a sequence to see if it is convergent or divergent.&lt;/p&gt;
+&lt;h2 id=&#34;remarks&#34;&gt;Remarks&lt;/h2&gt;
+&lt;p&gt;Note that the Squeeze Theorem also works for the limit computation of a sequence.&lt;/p&gt;
+&lt;h3 id=&#34;determining-if-a-sequence-is-alternating&#34;&gt;Determining if a Sequence is Alternating&lt;/h3&gt;
+&lt;p&gt;(a)
+$$ \bigg\lbrace (-1)^n \frac{2n+1}{n^2} \bigg\rbrace_{n=1}^{\infty} $$&lt;/p&gt;
+&lt;p&gt;By the squeeze theorem, if&lt;/p&gt;
+&lt;p&gt;$$ \lim_{n \rightarrow \infty} -\vert a_n \vert = \lim_{n \rightarrow \infty} |a_n| =0 $$&lt;/p&gt;
+&lt;p&gt;then,&lt;/p&gt;
+&lt;p&gt;$$ \lim_{n \rightarrow \infty} a_n = 0 $$&lt;/p&gt;
+&lt;p&gt;Using this fact, we can determine if the sequence above is convergent or divergent. First, consider the absolute value of the sequence:&lt;/p&gt;
+&lt;p&gt;$$ \lim_{n \rightarrow \infty} \bigg| (-1)^n \frac{2n+1}{n^2} \bigg| = \lim_{n \rightarrow \infty} \frac{2n+1}{n^2} = 0$$&lt;/p&gt;
+&lt;p&gt;Therefore, by Squeeze Theorem, we know that&lt;/p&gt;
+&lt;p&gt;$$ \lim_{n \rightarrow \infty}(-1)^n \frac{2n+1}{n^2} = 0 $$&lt;/p&gt;
+&lt;p&gt;Thus, even though the sequence looks like it&amp;rsquo;s alternating between positive and negative, the end behavior of the sequence shows that it&amp;rsquo;s actually not alternating because the limit equals zero, which is neither positive or negative. If the limit was anything besides zero, then the sequence &lt;em&gt;does&lt;/em&gt; alternate and is said to be divergent.&lt;/p&gt;
+&lt;h1 id=&#34;characterizing-sequences&#34;&gt;Characterizing Sequences&lt;/h1&gt;
+&lt;p&gt;A sequence is said to be&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&#39;text-decoration: underline&#39;&gt;increasing&lt;/span&gt; if $ a_n &amp;lt; a_{n+1} $ for &lt;em&gt;all&lt;/em&gt; $ n \geq 1 $&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#39;text-decoration: underline&#39;&gt;decreasing&lt;/span&gt; if $ a_n &amp;gt; a_{n+1} $ for &lt;em&gt;all&lt;/em&gt; $ n \geq 1 $&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A sequence is said to be &lt;span style=&#39;text-decoration: underline&#39;&gt;monotonic&lt;/span&gt; if it is either &lt;em&gt;always&lt;/em&gt; increasing or decreasing.&lt;/p&gt;
+&lt;p&gt;Sequences can also be bounded above and below&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&#39;text-decoration: underline&#39;&gt;bounded above&lt;/span&gt; if there exists $ M $ such that $ a_n \leq M $ for $ n \geq 1 $&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#39;text-decoration: underline&#39;&gt;bounded below&lt;/span&gt; if there exists $ m $ such that $ m \leq a_n $ for $ n \geq 1 $&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A sequence is said to be &lt;span style=&#39;text-decoration: underline&#39;&gt;bounded below&lt;/span&gt; if it is &lt;em&gt;both&lt;/em&gt; bounded above and below.&lt;/p&gt;
+&lt;h2 id=&#34;theorem-1&#34;&gt;Theorem&lt;/h2&gt;
+&lt;p&gt;Every bounded monotnic sequence is convergent.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Write To Remember</title>
+      <link>https://tinjamin.github.io/write-to-remember/</link>
+      <pubDate>Mon, 07 Mar 2022 10:57:46 -0500</pubDate>
+      
+      <guid>https://tinjamin.github.io/write-to-remember/</guid>
+      <description>&lt;h1 id=&#34;the-beginning&#34;&gt;The Beginning&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;ve never written for myself. I&amp;rsquo;ve only written for others. The sequences of words carefully placed to portray a facade of depth, only to have a shallow, hallow inside. It&amp;rsquo;s this staleness that inspired me to create this blog. I wanted a platform that focused on three things: discomfort, wisdom, and love.&lt;/p&gt;
+&lt;blockquote class=&#34;wp-block-quote&#34;&gt;
+    &lt;p&gt; 
+    &#34;Seek Discomfort. Seek Wisdom. Seek Love.&#34;
+    &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;seek-discomfort&#34;&gt;Seek Discomfort.&lt;/h2&gt;
+&lt;p&gt;For the unfortunate few who are unaware, this is the heart and pride of &lt;a href=&#34;https://www.youtube.com/c/YesTheory&#34;&gt;Yes Theory&lt;/a&gt;. The channel started with a group of college friends who wanted to take on the task of saying &amp;ldquo;Yes&amp;rdquo; to some of the randomest and wildest challenges they receive. Starting with completing an item a day on their bucket list for 30 days, this group of friends gave birth to a channel, more importantly, a family that is comprised of 7.28 million and spread across several nations.&lt;/p&gt;
+&lt;p&gt;I discover their channel when I was a freshman or sophomore in highschool. With the stress from school and the lack of time to pursue things that I really wanted to do, I turned to Yes Theory to imagine what life would be like if I started to say &amp;ldquo;Yes&amp;rdquo;. Perhaps, it was my discovery of Yes Theory that makes many people I know today perceive me as idealistic and a dreamer. Oddly enough, I have grown to embrace such perception for being idealistic brings forth color in a dull, pragmatic world and being a dreamer unbounds you from the binding shackles of society.&lt;/p&gt;
+&lt;p&gt;Since then, my &amp;ldquo;if I started to say &amp;lsquo;Yes&amp;rsquo;&amp;rdquo; has slightly transformed to &amp;ldquo;I must say &amp;lsquo;Yes&amp;rsquo;&amp;rdquo;. Indeed, being a college student doesn&amp;rsquo;t help much with regards to time and stress, but I have learned that those two things will never go away. I have become a seeker of discomfort, albeit an inexperienced and slightly fearful one, but I am still nonetheless a seeker. The seek for discomfort lies in the brief moments of daily life: a decision to pursue a spark, an ignition of spontaneity, a &amp;ldquo;Yes&amp;rdquo; to the things that make &lt;em&gt;you&lt;/em&gt; uncomfortable.&lt;/p&gt;
+&lt;h2 id=&#34;seek-wisdom&#34;&gt;Seek Wisdom.&lt;/h2&gt;
+</description>
+    </item>
+    
+    
+  </channel>
+</rss>
