@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&display=swap" rel="stylesheet">
+    <meta name="description" content="Your site description">
+    
+    <link rel="shortcut icon" href="https://tinjamin.github.io/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+    </script>
+
+    <title>Series</title>
+</head>
+<body><header id="banner">
+    <h2><a href="https://tinjamin.github.io">Rambunctious Living</a></h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="/posts" title="">posts</a>
+            </li><li>
+                <a href="/tags" title="">tags</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Series</h1>
+        <div>
+                <time>March 10, 2022</time>
+            </div>
+        <div id="post-author">
+            
+            Author: Tinjamin
+            
+        </div>
+        <div id="post-tag">
+            
+            Tags: [Math]
+            
+        </div>
+    </header>
+    <aside>
+        
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction-to-series">Introduction to Series</a>
+      <ul>
+        <li><a href="#convergence-or-divergence-of-a-series">Convergence or Divergence of a Series</a>
+          <ul>
+            <li><a href="#partial-sums">Partial Sums</a></li>
+            <li><a href="#geometric-series">Geometric Series</a></li>
+            <li><a href="#telescoping-series">Telescoping Series</a></li>
+            <li><a href="#harmonic-series">Harmonic Series</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        
+    </aside><h1 id="introduction-to-series">Introduction to Series</h1>
+<p><strong>Series</strong> are an infinite sum denoted by the following</p>
+<p>$$ a_1 + a_2 + a_3 + &hellip; = \Sigma_{i=1}^{\infty}a_i $$</p>
+<h2 id="convergence-or-divergence-of-a-series">Convergence or Divergence of a Series</h2>
+<h3 id="partial-sums">Partial Sums</h3>
+<p>The partial sum is the addition of each term equivalent to the number of iteration.</p>
+<p>$$ s_n = a_1 + a_2 + a_3 + &hellip; + a_n = \Sigma_{i=1}^{n}a_i $$
+For example, given the following series:</p>
+<p>$$ \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + \frac{1}{32} + &hellip;$$</p>
+<p>The partial sum would be:</p>
+<p>$$ s_1 = \frac{1}{2} $$
+$$ s_2 = \frac{1}{2} + \frac{1}{4} $$
+$$ s_3 = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} $$</p>
+<p>A series is said to be <span style='text-decoration: underline'>convergent</span> if $ lim_{n \rightarrow \infty} s_n = S $, where $ S $ is a real number.</p>
+<h3 id="geometric-series">Geometric Series</h3>
+<p>A <span style='text-decoration: underline'>geometric series</span> is an infinite series of the form</p>
+<p>$$ a + ar + ar^2 + &hellip; = \Sigma_{n=1}^{\infty}ar^{n-1} $$</p>
+<p>where $ a $ is the first term of the series and $ r $ is the common ratio between any two consecutive terms of the series.</p>
+<ul>
+<li>If $ |r| &lt; 1 $, the series converges and its sum is $ \frac{a}{1-r} $.</li>
+<li>If $ |r| \geq 1 $, the series diverges.</li>
+</ul>
+<p>Example:</p>
+<p>(a) Determine if the following series if convergent or divergent, if convergent find its sum.</p>
+<p>$$ \Sigma_{n=1}^{\infty} \frac{2}{\pi^n} $$</p>
+<p>The first step is to manipulate it to the form $ ar^{n-1} $ :
+$$ 2(\pi)^{-n} = 2(\pi)^{-n}(\pi)(\frac{1}{\pi}) = \frac{2}{\pi}(\pi)^{-n+1} = \frac{2}{\pi}(\pi)^{-(n-1)} = \frac{2}{\pi}(\frac{1}{\pi})^{n-1} $$</p>
+<p>From the theorem above, since $ |r| &lt; 1 $, we know that the series converges. The sum of the series is</p>
+<p>$$ \frac{a}{1-r} = \frac{ \frac{2}{\pi} }{ 1 - \frac{1}{\pi} } $$</p>
+<h3 id="telescoping-series">Telescoping Series</h3>
+<p>A <span style='text-decoration: underline'>telescoping series</span> is a series where the middle terms cancel.</p>
+<h3 id="harmonic-series">Harmonic Series</h3>
+<p>The harmonic series</p>
+<p>$$ \Sigma_{n=1}^{\infty} \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + &hellip; $$</p>
+<p>is <span style='text-decoration: underline'>divergent</span>.</p>
+<p>Remark. Adding or removing a <span style='text-decoration: underline'>finite</span> number of terms from the beginning of a series will <em>not</em> affect its convergence (or divergence).</p>
+<p>Theorem 2. If the series $ \Sigma_{n=1}^{\infty}a_n $ is <span style='text-decoration: underline'>convergent</span>, then $ \lim_{n \rightarrow \infty} a_n = 0$</p>
+<p>Using this theorem, we can perform a general test for divergence:</p>
+<ul>
+<li>If $ \lim_{n \rightarrow \infty}a_n \neq 0 $, then $ \Sigma_{n=1}^{\infty}a_n $ is divergent.</li>
+<li>If the limit is equal to $ 0 $, then we say that the test for divergence is <span style='text-decoration: underline'>inconclusive</span>.</li>
+</ul>
+</article>
+
+        </main><footer id="footer">
+    Theme: Etch | © Tin Bui
+</footer>
+</body>
+</html>
