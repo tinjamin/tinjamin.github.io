@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&display=swap" rel="stylesheet">
+    <meta name="description" content="Your site description">
+    
+    <link rel="shortcut icon" href="https://tinjamin.github.io/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+    </script>
+
+    <title>Alternating Series</title>
+</head>
+<body><header id="banner">
+    <h2><a href="https://tinjamin.github.io">Rambunctious Living</a></h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="/posts" title="">posts</a>
+            </li><li>
+                <a href="/tags" title="">tags</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Alternating Series</h1>
+        <div>
+                <time>March 27, 2022</time>
+            </div>
+        <div id="post-author">
+            
+            Author: Tinjamin
+            
+        </div>
+        <div id="post-tag">
+            
+            Tags: [Math]
+            
+        </div>
+    </header>
+    <aside>
+        
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#definition">Definition</a></li>
+    <li><a href="#alternating-series-test">Alternating Series Test</a>
+      <ul>
+        <li><a href="#intuition">Intuition</a></li>
+        <li><a href="#remark">Remark</a></li>
+      </ul>
+    </li>
+    <li><a href="#alternating-series-estimation-theorem">Alternating Series Estimation Theorem</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        
+    </aside><h1 id="definition">Definition</h1>
+<p>An alternating series is a series whose terms alternate between positive and negative values, often taking one of the two following forms:</p>
+<p>$$ \sum (-1)^{n-1}b_n \qquad \text{ or } \qquad \sum (-1)^n b_n $$</p>
+<p>where $ b_n &gt; 0 $</p>
+<h1 id="alternating-series-test">Alternating Series Test</h1>
+<p>If the alternating series satisfy <span style='text-decoration: underline'>both</span> of the following conditions:</p>
+<ul>
+<li>terms are <span style='text-decoration: underline'>decreasing</span> where $ b_{n+1} &lt; b_n $ for eventually all $ n $</li>
+<li>terms going to zero: $ \lim_{n \rightarrow \infty} b_n = 0 $</li>
+</ul>
+<p>then the series is <span style='text-decoration: underline'>convergent</span>, else the test is inconclusive.</p>
+<h2 id="intuition">Intuition</h2>
+<p>The first condition makes sure that each following term decreases and with $ b_n $ approaching $ 0 $, it means that the addition or substraction of each successive term is less than the absolute value of the previous term and getting closer to $ 0 $; therefore, the partial sum approaches the actual partial sum value.</p>
+<h2 id="remark">Remark</h2>
+<ul>
+<li>Turn the term into a function and use the derivative to check that the function is decreasing in order to satisfy the first condition</li>
+<li>If the second condition is not satisfied and $ \lim_{n \rightarrow \infty}b_n \neq 0 $, then we also know that $ \lim_{n \rightarrow \infty} (-1)^nb_n = DNE $ due to the alternating nature of the terms, and by the test for divergence then $ \sum (-1)^n b_n $ also diverges with $ a_n = (-1)^n b_n $</li>
+</ul>
+<h1 id="alternating-series-estimation-theorem">Alternating Series Estimation Theorem</h1>
+<p>If $ s $  is the sum of an alternating convergent series, then</p>
+<p>$$ |R_n| = |S - S_n| \leq b_{n+1} $$</p>
+<p>where $ R_n $ is the remainder/error.</p>
+<h2 id="example">Example</h2>
+<p>(a) How many terms of the series that&rsquo;s convergent and alternating do we need to add up the approximate sum to have an error bound of 0.01 or less?</p>
+<p>$$ \sum (-1)^{n-1} \frac{1}{n} $$</p>
+<p>Using the alternating series estimation theorem, we have</p>
+<p>$$ |R_n| \leq b_{n+1} \leq \frac{1}{n+1} $$</p>
+<p>and because we want the error bound to be 0.01 or less, we set the remainder to be less than or equal to $ 0.01 $ as follows:</p>
+<p>$$ \frac{1}{n+1} \leq \frac{1}{100} $$</p>
+<p>solving for $ n $, we get $ n \geq 99 $, which means that we need at least 99 terms to have an erorr bound within $0.01$.</p>
+</article>
+
+        </main><footer id="footer">
+    Theme: Etch | © Tin Bui
+</footer>
+</body>
+</html>

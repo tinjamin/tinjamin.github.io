@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&display=swap" rel="stylesheet">
+    <meta name="description" content="Your site description">
+    
+    <link rel="shortcut icon" href="https://tinjamin.github.io/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+    </script>
+
+    <title>Comparison Test (Series)</title>
+</head>
+<body><header id="banner">
+    <h2><a href="https://tinjamin.github.io">Rambunctious Living</a></h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="/posts" title="">posts</a>
+            </li><li>
+                <a href="/tags" title="">tags</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Comparison Test (Series)</h1>
+        <div>
+                <time>March 27, 2022</time>
+            </div>
+        <div id="post-author">
+            
+            Author: Tinjamin
+            
+        </div>
+        <div id="post-tag">
+            
+            Tags: [Math]
+            
+        </div>
+    </header>
+    <aside>
+        
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#direct-comparison-test">Direct Comparison Test</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#limit-comparison-test">Limit Comparison Test</a>
+      <ul>
+        <li><a href="#remark">Remark</a></li>
+        <li><a href="#example-1">Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#when-to-use-which">When to use which</a></li>
+  </ul>
+</nav>
+        
+    </aside><h1 id="direct-comparison-test">Direct Comparison Test</h1>
+<p>Suppose that $ \sum a_n $ and $ \sum b_n $ are series with <span style='text-decoration: underline'>positive</span> terms.</p>
+<ul>
+<li>If $ \sum b_n $ converges and $ a_n \leq b_n $ eventually for all $ n $, then $ \sum a_n $ also converges.</li>
+<li>If $ \sum b_n $ diverges and $ a_n \geq b_n $ eventually for all $ n $, then $ \sum a_n $ also diverges.</li>
+</ul>
+<p>For the comparison test, always ask yourself these following questions:</p>
+<ul>
+<li>What&rsquo;s the part of $ a_n $ that contributes most to the overall growth of the term as $ n \rightarrow \infty $</li>
+</ul>
+<h2 id="example">Example</h2>
+<p>(a)</p>
+<p>$$ \sum_{n = 1}^{\infty} \frac{1}{n^2+1} $$</p>
+<p>For this question, $ a_n = \frac{1}{n^2+1} $ and $ b_n = \frac{1}{n^2} $ which implies that $ a_n \leq b_n $, and because $ b_n $ is a convergent p-series then by the direct comparison test we know that $ a_n $ must also converge because it is smaller than $ b_n $. The term $ b_n $ was determined by looking at which term contributes the most to the overall rate of growth of the original term in both the numerator and denominator.</p>
+<h1 id="limit-comparison-test">Limit Comparison Test</h1>
+<p>Suppose $ \sum a_n $ and $ \sum b_n $ are series with <span style='text-decoration: underline'>positive</span> terms. If</p>
+<p>$$ \lim_{n \rightarrow \infty} \frac{a_n}{b_n} = C &gt; 0 $$</p>
+<p>where $ C $ is a finite, non-zero number then <span style='text-decoration: underline'>both</span> series converges or diverges.</p>
+<h2 id="remark">Remark</h2>
+<p>If</p>
+<p>$$ \lim_{n \rightarrow \infty} \frac{a_n}{b_n} = 0 \text{ or } \infty $$</p>
+<p>then the limit comparison test is inconclusive.</p>
+<h2 id="example-1">Example</h2>
+<p>(a)</p>
+<p>$$ \sum_{n=1}^{\infty} \frac{1}{2^n-n} $$</p>
+<p>The dominating factor of this term is the exponential in the denominator and the constant $ 1 $ in the numerator; therefore, its a reasonable decision to let $ b_n = \frac{1}{2^n} = (\frac{1}{2})^n$, which is a convergent geometric series because $ |r| = \frac{1}{2} &lt; 1 $. However, we cannot rely on the direct comparison test because $ b_n \leq a_n $, which tells us nothing about the larger series $ a_n $, thus we turn to the limit comparison test.</p>
+<p>$$ \lim_{n \rightarrow \infty} \frac{a_n}{b_n} = \lim_{n \rightarrow \infty} \frac{2^n}{2^n-n}$$</p>
+<p>Performing L&rsquo;Hopital Rule twice, we get</p>
+<p>$$ \lim_{n \rightarrow \infty} \frac{2^n(\ln{2})^2}{2^n(\ln{2})^2} = 1 $$</p>
+<p>and thus by the limit comparison test, $ a_n $ also converges.</p>
+<h1 id="when-to-use-which">When to use which</h1>
+<p>The general rule of thumb for determining which comparison test to use is that if you cannot decide whether $ \sum a_n $  or $ \sum b_n $ is larger, then it is best to use the Limit Comparison Test. Some people default to the limit comparison test, but the direct comparison test is always more efficient and faster albeit harder of a claim to make.</p>
+</article>
+
+        </main><footer id="footer">
+    Theme: Etch | © Tin Bui
+</footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&display=swap" rel="stylesheet">
+    <meta name="description" content="Your site description">
+    
+    <link rel="shortcut icon" href="https://tinjamin.github.io/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+    </script>
+
+    <title>Absolute Convergence and Ratio/Root Test</title>
+</head>
+<body><header id="banner">
+    <h2><a href="https://tinjamin.github.io">Rambunctious Living</a></h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="/posts" title="">posts</a>
+            </li><li>
+                <a href="/tags" title="">tags</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Absolute Convergence and Ratio/Root Test</h1>
+        <div>
+                <time>March 27, 2022</time>
+            </div>
+        <div id="post-author">
+            
+            Author: Tinjamin
+            
+        </div>
+        <div id="post-tag">
+            
+            Tags: [Math]
+            
+        </div>
+    </header>
+    <aside>
+        
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#absolute-convergence">Absolute Convergence</a>
+      <ul>
+        <li><a href="#theorem">Theorem</a></li>
+      </ul>
+    </li>
+    <li><a href="#conditionally-convergence">Conditionally Convergence</a></li>
+    <li><a href="#the-ratio-test">The Ratio Test</a></li>
+    <li><a href="#the-root-test">The Root Test</a></li>
+  </ul>
+</nav>
+        
+    </aside><h1 id="absolute-convergence">Absolute Convergence</h1>
+<p>Given any series $ \sum a_n $, consider corresponding series $ \sum |a_n| $</p>
+<p>If $ \sum |a_n| $  is convergent, then $ \sum a_n $ is called absolutely convergent.</p>
+<h2 id="theorem">Theorem</h2>
+<p>If a series $ \sum a_n $ is absolutely convergent, then the series is also convergent.</p>
+<p>$$ \sum |a_n| \text{ convergent } \Rightarrow \sum a_n \text{ convergent } $$</p>
+<h1 id="conditionally-convergence">Conditionally Convergence</h1>
+<p>A series $ \sum a_n $ is called conditionally converges if $ \sum a_n $ converges but $ \sum |a_n| $ diverges.</p>
+<h1 id="the-ratio-test">The Ratio Test</h1>
+<p>Given a series $ \sum a_n $ that</p>
+<p>$$ L = \lim_{n \rightarrow \infty} \bigg| \frac{a_{n+1}}{a_n} \bigg| $$</p>
+<p>then the series:</p>
+<ul>
+<li>Converges absolutely if $ L &lt; 1 $</li>
+<li>Diverges if $ L &gt; 1 $</li>
+<li>Ratio test inconclusive if $ L = 1 $</li>
+</ul>
+<h1 id="the-root-test">The Root Test</h1>
+<p>Given a series $ \sum a_n $ that</p>
+<p>$$ L = \lim_{n \rightarrow \infty} \sqrt[n]{|a_n|} $$</p>
+<p>then the series:</p>
+<ul>
+<li>Converges absolutely if $ L &lt; 1 $</li>
+<li>Diverges if $ L &gt; 1 $</li>
+<li>Ratio test inconclusive if $ L = 1 $</li>
+</ul>
+</article>
+
+        </main><footer id="footer">
+    Theme: Etch | © Tin Bui
+</footer>
+</body>
+</html>

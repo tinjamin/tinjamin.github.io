@@ -6,9 +6,130 @@
     <description>Recent content in Tags on Rambunctious Living</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 21 Mar 2022 08:05:29 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 27 Mar 2022 16:43:53 -0400</lastBuildDate>
     
 	<atom:link href="https://tinjamin.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>Absolute Convergence and Ratio/Root Test</title>
+      <link>https://tinjamin.github.io/absolute-convergence-and-ratio/root-test/</link>
+      <pubDate>Sun, 27 Mar 2022 16:43:53 -0400</pubDate>
+      
+      <guid>https://tinjamin.github.io/absolute-convergence-and-ratio/root-test/</guid>
+      <description>&lt;h1 id=&#34;absolute-convergence&#34;&gt;Absolute Convergence&lt;/h1&gt;
+&lt;p&gt;Given any series $ \sum a_n $, consider corresponding series $ \sum |a_n| $&lt;/p&gt;
+&lt;p&gt;If $ \sum |a_n| $  is convergent, then $ \sum a_n $ is called absolutely convergent.&lt;/p&gt;
+&lt;h2 id=&#34;theorem&#34;&gt;Theorem&lt;/h2&gt;
+&lt;p&gt;If a series $ \sum a_n $ is absolutely convergent, then the series is also convergent.&lt;/p&gt;
+&lt;p&gt;$$ \sum |a_n| \text{ convergent } \Rightarrow \sum a_n \text{ convergent } $$&lt;/p&gt;
+&lt;h1 id=&#34;conditionally-convergence&#34;&gt;Conditionally Convergence&lt;/h1&gt;
+&lt;p&gt;A series $ \sum a_n $ is called conditionally converges if $ \sum a_n $ converges but $ \sum |a_n| $ diverges.&lt;/p&gt;
+&lt;h1 id=&#34;the-ratio-test&#34;&gt;The Ratio Test&lt;/h1&gt;
+&lt;p&gt;Given a series $ \sum a_n $ that&lt;/p&gt;
+&lt;p&gt;$$ L = \lim_{n \rightarrow \infty} \bigg| \frac{a_{n+1}}{a_n} \bigg| $$&lt;/p&gt;
+&lt;p&gt;then the series:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Converges absolutely if $ L &amp;lt; 1 $&lt;/li&gt;
+&lt;li&gt;Diverges if $ L &amp;gt; 1 $&lt;/li&gt;
+&lt;li&gt;Ratio test inconclusive if $ L = 1 $&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;the-root-test&#34;&gt;The Root Test&lt;/h1&gt;
+&lt;p&gt;Given a series $ \sum a_n $ that&lt;/p&gt;
+&lt;p&gt;$$ L = \lim_{n \rightarrow \infty} \sqrt[n]{|a_n|} $$&lt;/p&gt;
+&lt;p&gt;then the series:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Converges absolutely if $ L &amp;lt; 1 $&lt;/li&gt;
+&lt;li&gt;Diverges if $ L &amp;gt; 1 $&lt;/li&gt;
+&lt;li&gt;Ratio test inconclusive if $ L = 1 $&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Alternating Series</title>
+      <link>https://tinjamin.github.io/alternating-series/</link>
+      <pubDate>Sun, 27 Mar 2022 15:02:52 -0400</pubDate>
+      
+      <guid>https://tinjamin.github.io/alternating-series/</guid>
+      <description>&lt;h1 id=&#34;definition&#34;&gt;Definition&lt;/h1&gt;
+&lt;p&gt;An alternating series is a series whose terms alternate between positive and negative values, often taking one of the two following forms:&lt;/p&gt;
+&lt;p&gt;$$ \sum (-1)^{n-1}b_n \qquad \text{ or } \qquad \sum (-1)^n b_n $$&lt;/p&gt;
+&lt;p&gt;where $ b_n &amp;gt; 0 $&lt;/p&gt;
+&lt;h1 id=&#34;alternating-series-test&#34;&gt;Alternating Series Test&lt;/h1&gt;
+&lt;p&gt;If the alternating series satisfy &lt;span style=&#39;text-decoration: underline&#39;&gt;both&lt;/span&gt; of the following conditions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;terms are &lt;span style=&#39;text-decoration: underline&#39;&gt;decreasing&lt;/span&gt; where $ b_{n+1} &amp;lt; b_n $ for eventually all $ n $&lt;/li&gt;
+&lt;li&gt;terms going to zero: $ \lim_{n \rightarrow \infty} b_n = 0 $&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;then the series is &lt;span style=&#39;text-decoration: underline&#39;&gt;convergent&lt;/span&gt;, else the test is inconclusive.&lt;/p&gt;
+&lt;h2 id=&#34;intuition&#34;&gt;Intuition&lt;/h2&gt;
+&lt;p&gt;The first condition makes sure that each following term decreases and with $ b_n $ approaching $ 0 $, it means that the addition or substraction of each successive term is less than the absolute value of the previous term and getting closer to $ 0 $; therefore, the partial sum approaches the actual partial sum value.&lt;/p&gt;
+&lt;h2 id=&#34;remark&#34;&gt;Remark&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Turn the term into a function and use the derivative to check that the function is decreasing in order to satisfy the first condition&lt;/li&gt;
+&lt;li&gt;If the second condition is not satisfied and $ \lim_{n \rightarrow \infty}b_n \neq 0 $, then we also know that $ \lim_{n \rightarrow \infty} (-1)^nb_n = DNE $ due to the alternating nature of the terms, and by the test for divergence then $ \sum (-1)^n b_n $ also diverges with $ a_n = (-1)^n b_n $&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;alternating-series-estimation-theorem&#34;&gt;Alternating Series Estimation Theorem&lt;/h1&gt;
+&lt;p&gt;If $ s $  is the sum of an alternating convergent series, then&lt;/p&gt;
+&lt;p&gt;$$ |R_n| = |S - S_n| \leq b_{n+1} $$&lt;/p&gt;
+&lt;p&gt;where $ R_n $ is the remainder/error.&lt;/p&gt;
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+&lt;p&gt;(a) How many terms of the series that&amp;rsquo;s convergent and alternating do we need to add up the approximate sum to have an error bound of 0.01 or less?&lt;/p&gt;
+&lt;p&gt;$$ \sum (-1)^{n-1} \frac{1}{n} $$&lt;/p&gt;
+&lt;p&gt;Using the alternating series estimation theorem, we have&lt;/p&gt;
+&lt;p&gt;$$ |R_n| \leq b_{n+1} \leq \frac{1}{n+1} $$&lt;/p&gt;
+&lt;p&gt;and because we want the error bound to be 0.01 or less, we set the remainder to be less than or equal to $ 0.01 $ as follows:&lt;/p&gt;
+&lt;p&gt;$$ \frac{1}{n+1} \leq \frac{1}{100} $$&lt;/p&gt;
+&lt;p&gt;solving for $ n $, we get $ n \geq 99 $, which means that we need at least 99 terms to have an erorr bound within $0.01$.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Comparison Test (Series)</title>
+      <link>https://tinjamin.github.io/comparison-test-series/</link>
+      <pubDate>Sun, 27 Mar 2022 14:35:55 -0400</pubDate>
+      
+      <guid>https://tinjamin.github.io/comparison-test-series/</guid>
+      <description>&lt;h1 id=&#34;direct-comparison-test&#34;&gt;Direct Comparison Test&lt;/h1&gt;
+&lt;p&gt;Suppose that $ \sum a_n $ and $ \sum b_n $ are series with &lt;span style=&#39;text-decoration: underline&#39;&gt;positive&lt;/span&gt; terms.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If $ \sum b_n $ converges and $ a_n \leq b_n $ eventually for all $ n $, then $ \sum a_n $ also converges.&lt;/li&gt;
+&lt;li&gt;If $ \sum b_n $ diverges and $ a_n \geq b_n $ eventually for all $ n $, then $ \sum a_n $ also diverges.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For the comparison test, always ask yourself these following questions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What&amp;rsquo;s the part of $ a_n $ that contributes most to the overall growth of the term as $ n \rightarrow \infty $&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+&lt;p&gt;(a)&lt;/p&gt;
+&lt;p&gt;$$ \sum_{n = 1}^{\infty} \frac{1}{n^2+1} $$&lt;/p&gt;
+&lt;p&gt;For this question, $ a_n = \frac{1}{n^2+1} $ and $ b_n = \frac{1}{n^2} $ which implies that $ a_n \leq b_n $, and because $ b_n $ is a convergent p-series then by the direct comparison test we know that $ a_n $ must also converge because it is smaller than $ b_n $. The term $ b_n $ was determined by looking at which term contributes the most to the overall rate of growth of the original term in both the numerator and denominator.&lt;/p&gt;
+&lt;h1 id=&#34;limit-comparison-test&#34;&gt;Limit Comparison Test&lt;/h1&gt;
+&lt;p&gt;Suppose $ \sum a_n $ and $ \sum b_n $ are series with &lt;span style=&#39;text-decoration: underline&#39;&gt;positive&lt;/span&gt; terms. If&lt;/p&gt;
+&lt;p&gt;$$ \lim_{n \rightarrow \infty} \frac{a_n}{b_n} = C &amp;gt; 0 $$&lt;/p&gt;
+&lt;p&gt;where $ C $ is a finite, non-zero number then &lt;span style=&#39;text-decoration: underline&#39;&gt;both&lt;/span&gt; series converges or diverges.&lt;/p&gt;
+&lt;h2 id=&#34;remark&#34;&gt;Remark&lt;/h2&gt;
+&lt;p&gt;If&lt;/p&gt;
+&lt;p&gt;$$ \lim_{n \rightarrow \infty} \frac{a_n}{b_n} = 0 \text{ or } \infty $$&lt;/p&gt;
+&lt;p&gt;then the limit comparison test is inconclusive.&lt;/p&gt;
+&lt;h2 id=&#34;example-1&#34;&gt;Example&lt;/h2&gt;
+&lt;p&gt;(a)&lt;/p&gt;
+&lt;p&gt;$$ \sum_{n=1}^{\infty} \frac{1}{2^n-n} $$&lt;/p&gt;
+&lt;p&gt;The dominating factor of this term is the exponential in the denominator and the constant $ 1 $ in the numerator; therefore, its a reasonable decision to let $ b_n = \frac{1}{2^n} = (\frac{1}{2})^n$, which is a convergent geometric series because $ |r| = \frac{1}{2} &amp;lt; 1 $. However, we cannot rely on the direct comparison test because $ b_n \leq a_n $, which tells us nothing about the larger series $ a_n $, thus we turn to the limit comparison test.&lt;/p&gt;
+&lt;p&gt;$$ \lim_{n \rightarrow \infty} \frac{a_n}{b_n} = \lim_{n \rightarrow \infty} \frac{2^n}{2^n-n}$$&lt;/p&gt;
+&lt;p&gt;Performing L&amp;rsquo;Hopital Rule twice, we get&lt;/p&gt;
+&lt;p&gt;$$ \lim_{n \rightarrow \infty} \frac{2^n(\ln{2})^2}{2^n(\ln{2})^2} = 1 $$&lt;/p&gt;
+&lt;p&gt;and thus by the limit comparison test, $ a_n $ also converges.&lt;/p&gt;
+&lt;h1 id=&#34;when-to-use-which&#34;&gt;When to use which&lt;/h1&gt;
+&lt;p&gt;The general rule of thumb for determining which comparison test to use is that if you cannot decide whether $ \sum a_n $  or $ \sum b_n $ is larger, then it is best to use the Limit Comparison Test. Some people default to the limit comparison test, but the direct comparison test is always more efficient and faster albeit harder of a claim to make.&lt;/p&gt;
+</description>
+    </item>
     
     
     
