@@ -1,0 +1,24 @@
+.sidenav {
+    height: 100%;
+    width: 12%;
+    background-color: #000;
+    overflow-x: hidden;         /* determines behavior of overflow content */
+    padding-top: 2%;
+    position: fixed;
+    z-index: 1;                 /* stack order of element */
+    top: 0;
+    left: 0;
+}
+
+.sidenav a {
+    font-family: 'Jetbrains Mono', monospace;
+    font-size: 20px;
+    color: #818181;
+    text-decoration: none;
+    padding: 2% 2% 2% 15%;                      /* top right bottom left */
+    display: block;                             /* https://yld.me/hVx9 */
+}
+
+.sidenav a:hover {
+    color: #fff;
+}
