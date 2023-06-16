@@ -1,5 +1,6 @@
 # Project Tree
 
+```
 .
 ├── content
 │   ├── images
@@ -20,6 +21,7 @@
     │   └── pages.css
     └── templates
         └── blog-post-template.html
+```
 
 # Dependencies
 
