@@ -40,10 +40,10 @@ format_html
 
 # fill template with post content
 nvim --headless $POST_PATH/$BASENAME.html \
-    -c "+28" \
+    -c "/<!-- START CONTENT -->" \
     -c ":r $BASENAME.temp" \
     -c ":%s/BLOG POST/$POST_TITLE" \
-    -c ":26s/\(Date: \)/\1$(date +%Y.%m.%d)" \
+    -c ":%s/\(<p id=\"date\">\)\(Date: \)\(<\/p>\)/\1\2$(date +%Y.%m.%d)\3" \
     -c "wq"
 
 # clean up
