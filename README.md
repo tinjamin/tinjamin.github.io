@@ -28,6 +28,8 @@
 * `python`
 * `python-markdown`
 * `nvim`
+* `npm`
+* `nodejs`
 
 # Quickstart Guide
 
