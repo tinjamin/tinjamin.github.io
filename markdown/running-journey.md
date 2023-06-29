@@ -38,3 +38,14 @@ summer where the morning is much cooler than the afternoon. I didn't stop
 mid-run today, but my legs and thighs are definitely sore since I haven't ran
 for over two weeks and diving straight back into consecutive 5k is really
 questionable.
+
+## Day 4 - 2023.06.28
+
+Distance: 3.13 mi.
+
+Time: 9:22 min/mi
+
+Thoughts: Hardest run yet. I started out way too fast, so then I ended up being
+exhausted towards the end. I walked multiple times throughout the run but
+managed to channel my inner dawg to run to the finish line. My feet and ankles
+feel horrendous though, so I might take it very easy tomorrow. I don't know.
