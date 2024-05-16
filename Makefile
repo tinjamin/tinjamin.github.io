@@ -1,11 +1,12 @@
 INDEX = docs/index.html
-MD = $(shell ls content/*.md)
-POSTS = $(MD:content/%.md=docs/posts/%.html)
+FULL_MD = $(shell ls content/*.md)
+POSTS = $(FULL_MD:content/%.md=docs/posts/%.html)
+MD = $(notdir $(FULL_MD))
 
-all: $(POSTS) $(INDEX) $(FEED)
+all: $(POSTS) $(INDEX)
 
 print:
-	@echo $(POSTS)
+	@echo $(MD)
 
 docs/index.html: templates/index.html $(POSTS)
 	@echo "Populating $@ with posts list..."
@@ -14,6 +15,7 @@ docs/index.html: templates/index.html $(POSTS)
 docs/posts/%.html: content/%.md templates/post.html
 	@echo "Converting $< to $@..."
 	@pandoc -s --template=templates/post.html -f markdown -t html $< -o $@
+	@sh util/next-prev-fn.sh "$(MD)" "$(notdir $<)"
 
 clean:
 	@echo "Nuking posts and (populated) index..."
