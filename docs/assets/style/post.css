@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: 'Jetbrains Mono', monospace;
+    font-weight: 425;
+}
+
+/* border surrounding post */
+.content {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 2% 2% 2% 2%;
+    margin: 2% 10% 2% 10%;          /* top right bottom left */
+}
+
+.frontmatter {
+    color: #818181;
+}
+
+.frontmatter p {
+    margin: 0% 10% 0% 10%
+}
+
+/* PC */
+h1, h2, h3, h4, p, ol, ul {
+    margin: 1% 10% 1% 10%;
+}
+
+/* MOBILE */
+@media screen and (max-width: 80rem){
+    h1, h2, h3, h4, p, ol, ul {
+        margin: 4% 10% 4% 10%;
+    }
+}
+
+p, ol, ul {
+    font-size: 1.2rem;
+}
+
+
+ol ul, ul ul, ul ol,
+ol ul ul, ul ul ul, ul ol ul {
+    margin: 1% 0% 1% 0%;
+}
+
+/* source: https://stackoverflow.com/a/48694906 */
+pre code {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    color: #666;
+    page-break-inside: avoid;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    word-wrap: break-word;
+    margin: 0% 10%;
+    display: block;
+}
+
+code {
+    border: 1px solid #ddd;
+    background: #f4f4f4;
+    padding: 0.05rem;
+    word-wrap:  break-word;
+    border-radius: 3px;
+    color: #666;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 24
+}

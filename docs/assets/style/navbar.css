@@ -1,0 +1,25 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2% 10% 0% 10%;          /* top right bottom left */
+}
+
+.navbar a:first-child {
+    margin-right: auto;
+}
+
+.navbar a:last-child {
+    margin-left: auto;
+}
+
+.navbar a {
+    font-family: 'Jetbrains Mono', monospace;
+    color: #818181;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #000;
+}

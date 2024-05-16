@@ -1,72 +1,66 @@
-# Project Tree
+# Dependencies
+
+* `pandoc`
+
+## Creating a New Blog Post
+
+To write a new blog entry do the following:
+
+1. Create a markdown file in `content/`
+    * The markdown file should have a header as follows:
+        
+```
+---
+title:
+author:
+date:
+tags:
+---
+```
+
+2. Enter `make` in the root directory and everything should be created
+
+To preview the blog, make sure that you are in the root directory of the blog
+and use `$ python3 -m http.server --directory docs`
+
+# Project Structure
 
 ```
 .
+├── Makefile
+├── README.md
 ├── content
-│   ├── images
-│   ├── pages
-│   │   ├── about.html
-│   │   ├── archive.html
-│   │   └── index.html
+│   ├── 2023-06-16-first-post.md
+│   ├── 2023-06-27-rules-to-teach-your-son.md
+│   └── 2024-05-15-blog-updates.md
+├── docs
+│   ├── assets
+│   │   ├── img
+│   │   └── style
+│   │       ├── index.css
+│   │       ├── navbar.css
+│   │       └── post.css
+│   ├── index.html
 │   └── posts
-│       └── first-post.html
-├── markdown
-│   └── first-post.md
-├── scripts
-│   └── new-post.sh
-└── theme
-    ├── static
-    │   ├── blog-post.css
-    │   ├── navbar.css
-    │   └── pages.css
-    └── templates
-        └── blog-post-template.html
+│       ├── 2023-06-16-first-post.html
+│       ├── 2023-06-27-rules-to-teach-your-son.html
+│       └── 2024-05-15-blog-updates.html
+├── templates
+│   ├── index.html
+│   └── post.html
+└── util
+    └── build-index.sh
 ```
 
-# Dependencies
+## Understanding Project Structure
 
-* `python`
-* `python-markdown`
-* `nvim`
-* `npm`
-* `nodejs`
+The `content/` directory contains all of the markdown file.
 
-# Quickstart Guide
+The `docs/` directory contains the html files of the markdown content along
+with the `assets/` directory which stores the `img/` and `styles/` directory.
 
-To begin blogging, create a file in the `markdown/` directory. Use markdown to
-structure your blog. Then, within the `markdown/` directory, enter the
-following command (note that your environment must have the `python-markdown`
-package in order for the script to execute correctly)
+The `templates/` directory contains all of the templates that Pandoc utilizes
+when converting from markdown to html.
 
-```sh
-$ sh ../new-post.sh <blog markdown file>
-```
-
-This command will generate a corresponding HTML file with the same filename as
-the one passed to the script and can be located in the `posts/` directory. Then,
-update `archive.html` to link the newly created post.
-
-# Understanding Project Structure
-
-The `content/` directory contains all of the HTML files that will be used to
-render the blog site. Inside the `content/` directory is the `images/`, `pages/`,
-and `posts/` directory. The `images/` directory should contain the images
-required for each posts. Optionally, each post should have a corresponding image
-directory inside of the `images/` directory for easy management. The `pages/`
-directory contains the three HTML file for the three pages that can be accessed
-by the user. Finally, the `posts/` directory contains the HTML converted files
-corresponding to each post.
-
-The `markdown/` directory contains the markdown versions of the posts before
-they are converted into HTML.
-
-The `scripts/` directory contains the script used to convert the markdown to
-HTML. The script does this by copying the `blog-post-template.html` in the
-`theme/templates/` directory. Then, it fills the template by reading in the
-converted HTML posts stored in a temporary file.
-
-The `theme/` directory stores the `static/` and `templates/` directory. The
-`static/` directory contains the CSS files that customizes the appearance of
-the various types of pages within the site. The `templates/` directory contains
-templates that can be reused to create posts so that they retain consistent
-formatting and appearance.
+The `util/` directory contains the script that generates the html listing of
+posts for `docs/index.html`.

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+This section links required CSS files along with what is shown on the tab of
+the browser.
+-->
+<head>
+    <title>Blog Updates</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="../assets/style/navbar.css">
+    <link rel="stylesheet" href="../assets/style/post.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="../index.html"><span class="material-symbols-outlined">turn_left</span></a>
+        <a href="../index.html"><span class="material-symbols-outlined">cottage</span></a>
+        <a href="../index.html"><span class="material-symbols-outlined">turn_right</span></a>
+    </div>
+
+    <div class="content">
+        <h1>Blog Updates</h1>
+
+        <div class="frontmatter">
+            <p>Author: tinjamin</p>
+            <p>Date: 2024-05-15</p>
+        </div>
+
+        <p>Hey there! It has been quite a while… Nearly a year since my
+        last post, and as I’m sure you can see, the blog has changed
+        quite a bit. Indeed, the design has become simpler, and I did
+        that on purpose. I found that managing the CSS of the previous
+        version of the blog was a bit of a hassle. Moreover, being that
+        this blog is my first fully self-designed/programmed blog, the
+        previous version did not account for different screensizes…</p>
+        <p>Put differently: I was (and still am) a noob and did not
+        design my blog to be responsive. Thus, this time around while
+        giving the blog a new look, I took the additional step of making
+        it responsive. I am not quite sure how well it turned out, but I
+        am sure that if it’s broken, I will find out soon enough.</p>
+        <p>However, the majority of the time during this
+        maintenance/upgrade was actually spent on the backend.
+        Previously, the blog required python, python-markdown, npm, etc.
+        to convert from markdown to html and generate the posts.
+        Although a lot of the heavy lifting was done by the converting
+        program, I still had to manually update the index every time I
+        released a post, which was never…</p>
+        <p>Now, however, thanks to pnutzh4x0r and the contributors of
+        the NDlug blog project, I was able to transition to an entirely
+        different system. This one requires only pandoc and a Makefile.
+        If I am being completely honest, I have yet to fully understand
+        the Makefile and the <code>build-index.sh</code> script that is
+        used. That being said, the gist of the workflow is as
+        follows:</p>
+        <ol type="1">
+        <li>Scan <code>content/*.md</code> for the markdown files</li>
+        <li>Convert the markdown files to html using Pandoc and a post
+        html template</li>
+        <li>Feed the location of all the generated html files to
+        <code>build-index.sh</code> which generates a linked bullet list
+        to the files in html</li>
+        <li>The html linked bullet list is inserted into the
+        <code>index.html</code> template via sed</li>
+        </ol>
+        <p>This fully automates the conversion from markdown to html
+        along with updating the index. Hopefully, this new workflow will
+        encourage me to post more because at this point, it is just
+        typing in a markdown file, and I am not sure what else I can do
+        to make this process more seamless :}</p>
+    </div>
+</body>
+</html>

@@ -1,3 +1,10 @@
+---
+title: First Post
+author: tinjamin
+date: 2023-06-16
+tags:
+---
+
 This will be my third first post ever. That is to say that I have attempted to
 start this "Rambunctious Living" blog three times. First time using Jekyll,
 second time using Pelican, now, the third time, using my own custom

@@ -1,4 +1,9 @@
-RULES TO TEACH YOUR SON
+---
+title: Rules to Teach Your Son
+author: unknown
+date: 2023-06-27
+tags: life
+---
 
 1. Never shake a man’s hand sitting down.
 2. Don’t enter a pool by the stairs.
@@ -34,5 +39,3 @@ RULES TO TEACH YOUR SON
 32. In all things lead by example not explanation.
 33. Dress how you want to be addressed
 34. BE BLESSED BY BEING A BLESSING
-
-[source](<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbasirat.gmail%2Fposts%2Fpfbid0ywo2zTgGs1KDqKN49SFfaTFUfFyQgmgy57uNTxfBeQNTxy49AEmS1GVbArHiqJxul&show_text=true&width=500" width="500" height="658" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>)
