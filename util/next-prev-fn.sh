@@ -19,3 +19,4 @@ fi
 
 sed -E -i "s/\{\{prev-post\}\}/$prev_file/g" docs/posts/$curr_file
 sed -E -i "s/\{\{next-post\}\}/$next_file/g" docs/posts/$curr_file
+sed -E -i "s/\"\.\/\"/\"\"/g" docs/posts/$curr_file
