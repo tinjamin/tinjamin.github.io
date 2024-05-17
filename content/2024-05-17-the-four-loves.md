@@ -24,7 +24,7 @@ adieu, let the thoughts flow!
 > condition... Man approaches God most nearly when he is in one sense least 
 > like God... This paradox staggered me when I first ran into it; it also
 > wrecked all my previous attempts to write about love. 
-<cite>"The Four Loves", C.S.Lewis</cite>
+<cite>"The Four Loves", C.S. Lewis</cite>
 
 *Why might this paradox be so staggering? How does it subvert other assumptions
 we make about Need-love?* ^CLF^
@@ -39,6 +39,6 @@ we make about Need-love?* ^CLF^
 > mortifying it; but not to feel it is in general the mark of the cold egoist...
 > the illusory feeling that it is good for us to be alone---is a bad spiritual
 > symptom
-<cite>"The Four Loves", C.S.Lewis</cite>
+<cite>"The Four Loves", C.S. Lewis</cite>
 
 [1]: http://www.cslewis.org/resources/studyguides/Study%20Guide%20-%20The%20Four%20Loves.pdf?x71172
