@@ -21,7 +21,9 @@ tags:
 2. Enter `make` in the root directory and everything should be created
 
 To preview the blog, make sure that you are in the root directory of the blog
-and use `$ python3 -m http.server --directory docs`
+and use `$ python3 -m http.server --directory docs`. For a faster local http
+server, you can install `miniserve` and run the following command: `$ miniserve
+--index docs`.
 
 # Project Structure
 

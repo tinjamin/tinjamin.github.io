@@ -28,10 +28,22 @@ h1, h2, h3, h4, p, ol, ul {
     margin: 1% 10% 1% 10%;
 }
 
+img {
+    max-width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 0.75rem 0.75rem;
+}
+
 /* MOBILE */
 @media screen and (max-width: 80rem){
     h1, h2, h3, h4, p, ol, ul {
         margin: 4% 10% 4% 10%;
+    }
+
+    img {
+        max-width: 75%;
     }
 }
 
@@ -40,7 +52,7 @@ p, ol, ul {
 }
 
 
-ol ul, ul ul, ul ol,
+ol ul, ul ul, ul ol, ol ol,
 ol ul ul, ul ul ul, ul ol ul {
     margin: 1% 0% 1% 0%;
 }
@@ -67,6 +79,12 @@ code {
     word-wrap:  break-word;
     border-radius: 3px;
     color: #666;
+}
+
+figure {
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
 }
 
 .material-symbols-outlined {
