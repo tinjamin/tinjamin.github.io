@@ -5,9 +5,6 @@ MD = $(notdir $(FULL_MD))
 
 all: $(POSTS) $(INDEX)
 
-print:
-	@echo $(MD)
-
 docs/index.html: templates/index.html $(POSTS)
 	@echo "Populating $@ with posts list..."
 	@sh util/build-index.sh $< $@

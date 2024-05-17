@@ -87,6 +87,25 @@ figure {
     flex-direction: column;
 }
 
+/* source: https://css-tricks.com/examples/Blockquotes/ */
+blockquote {
+    margin: 3% 10%;
+    padding-left: 15px;
+    border-left: 3px solid #ddd;
+    p {
+        margin: 0;
+    }
+    /* source: https://codepen.io/chris22smith/pen/oQWavL */
+    cite {
+        display: block;
+        font-style: italic;
+        text-align: right;
+        &:before {
+        content: "- ";
+      }
+    }
+}
+
 .material-symbols-outlined {
     font-variation-settings:
     'FILL' 0,
