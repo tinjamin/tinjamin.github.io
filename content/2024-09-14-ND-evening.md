@@ -10,7 +10,7 @@ something. So here it is: sometimes, after working so hard, back to back days,
 and getting very little done, you realize that work is always going to be 
 there---so you have to choose.
 
-Do you work? Or do you call it day?
+Do you work? Or do you call it a day?
 
 The work is always going to be there, but the day is not. Time flows, day goes.
 But work? Work always stays.
